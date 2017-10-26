@@ -12,6 +12,8 @@ if (CLANG_RESOURCE_DIR)
   add_definitions(-DCLANG_RESOURCE_DIR=\"${CLANG_RESOURCE_DIR}\")
 endif()
 
+SET(CMAKE_INSTALL_RPATH "${CMAKE_INSTALL_PREFIX}/lib" "${LIBCLANG_LIBRARY_DIR}" "/usr/lib64")
+
 # not to be taken as a module-definition file to link on Windows
 set_source_files_properties(Commands.def PROPERTIES HEADER_FILE_ONLY TRUE)
 

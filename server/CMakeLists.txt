@@ -41,6 +41,9 @@ endif()
 enable_colored_diagnotics()
 check_cxx11_options()
 
+# when building, use the install RPATH already
+SET(CMAKE_BUILD_WITH_INSTALL_RPATH TRUE)
+
 if (CXX11_COMPILE_OPTIONS)
   add_compile_options_(${CXX11_COMPILE_OPTIONS})
 endif()
